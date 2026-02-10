@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GodView Module Demo</title>
+
+    <!-- 1. Leaflet CSS (Required) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- 2. GodView CSS -->
+    <link rel="stylesheet" href="./src/godview.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Container for the app -->
+    <div id="godview-app"></div>
+
+    <!-- 1. Leaflet JS (Required) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script type="module">
+        import { GodView } from './src/godview.js';
+
+        // Initialize GodView as a System Monitor
+        const app = new GodView({
+            containerId: 'godview-app',
+            password: 'demo', 
+            title: 'System Overwatch',
+            logo: '🛡️',
+            
+            // Define Custom Stats
+            stats: [
+                { id: 'evts', label: 'Events/sec', color: 'pink', icon: '⚡', fn: () => Math.floor(Math.random() * 500) },
+                { id: 'load', label: 'Sys Load', color: 'purple', icon: '🔥', fn: () => Math.floor(Math.random() * 100) + '%' },
+                { id: 'nodes', label: 'Active Nodes', color: 'blue', icon: '💻', fn: (d) => new Set(d.map(i => i.location)).size },
+                { id: 'errs', label: 'Errors', color: 'green', icon: '⚠️', fn: (d) => d.filter(i => i.meta === 'ERROR').length }
+            ]
+        });
+
+        app.init();
+    </script>
+</body>
+
+</html>
