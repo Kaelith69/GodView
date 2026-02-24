@@ -413,19 +413,21 @@ GodView has no npm package. It's a module file you drop into your project. Old s
 
 **Step 1:** Copy `src/godview.js` and `src/godview.css` into your project.
 
-**Step 2:** Add the Leaflet peer dependency in your HTML:
+**Step 2:** Add Leaflet (in `<head>`) and GodView (anywhere before your script):
 
 ```html
+<!-- In <head> -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="./src/godview.css">
 ```
 
-**Step 3:** Import and initialize:
+**Step 3:** Add a container div and initialize (Leaflet JS must load before the module):
 
 ```html
-<link rel="stylesheet" href="./src/godview.css">
 <div id="my-dashboard"></div>
 
+<!-- Before closing </body> -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="module">
     import { GodView } from './src/godview.js';
 
@@ -437,6 +439,34 @@ GodView has no npm package. It's a module file you drop into your project. Old s
 
     dashboard.init();
 </script>
+```
+
+**Complete working example:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="./src/godview.css">
+    <style>body { margin: 0; background: #000; }</style>
+</head>
+<body>
+    <div id="my-dashboard"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module">
+        import { GodView } from './src/godview.js';
+        new GodView({
+            containerId: 'my-dashboard',
+            password: 'hunter2',
+            title: 'Mission Control'
+        }).init();
+    </script>
+</body>
+</html>
 ```
 
 That's it. You're done. Go touch grass.
@@ -524,7 +554,7 @@ GodView/
 │   ├── godview.js      # The whole module (ES6 class, ~420 lines)
 │   └── godview.css     # Scoped styles (CSS variables, glassmorphism, animations)
 ├── assets/
-│   └── demo.gif        # (place your demo GIF here)
+│   └── README.md       # instructions for adding a demo GIF
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
