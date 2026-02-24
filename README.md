@@ -85,23 +85,13 @@ GodView is a **zero-dependency\*, drop-in JavaScript dashboard module** that tur
 
 ---
 
-<!-- 4. DEMO GIF SECTION -->
+<!-- 4. HUMOR GIF SECTION -->
 
-## 🎬 In Action
+<div align="center">
 
-> **Place demo GIF here:** `assets/demo.gif`
+![Humor](https://media.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif)
 
-![Demo](assets/demo.gif)
-
-*The GIF above should show:*
-- *The login screen appearing with the glassmorphic input box*
-- *A wrong password triggering the shake animation (this is the fun part)*
-- *Successful login transitioning to the full dashboard*
-- *The dark map populating with glowing location markers*
-- *The search bar filtering cards in real time*
-- *The CSV export button doing its thing*
-
-*Record it with any screen capture tool. Keep it under 5 MB. Nobody wants to download a movie to read a README.*
+</div>
 
 ---
 
