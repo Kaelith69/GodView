@@ -1,8 +1,48 @@
 # 👁️ GodView Wiki
 
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" width="700" height="100">
+  <defs>
+    <radialGradient id="homeBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="homeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <filter id="homeGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="700" height="100" rx="10" fill="url(#homeBg)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="33" x2="700" y2="33"/>
+    <line x1="0" y1="66" x2="700" y2="66"/>
+    <line x1="175" y1="0" x2="175" y2="100"/>
+    <line x1="350" y1="0" x2="350" y2="100"/>
+    <line x1="525" y1="0" x2="525" y2="100"/>
+  </g>
+  <!-- Eye -->
+  <g transform="translate(290, 50)" filter="url(#homeGlow)">
+    <ellipse cx="0" cy="0" rx="22" ry="13" fill="none" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="0" cy="0" r="7" fill="#f43f5e" opacity="0.9"/>
+    <circle cx="2.5" cy="-2.5" r="2.5" fill="white" opacity="0.5"/>
+  </g>
+  <!-- Title -->
+  <text x="324" y="44" font-family="'Outfit', system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#homeGrad)" letter-spacing="-0.5" filter="url(#homeGlow)">GodView</text>
+  <text x="324" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#71717a" letter-spacing="3">DOCUMENTATION HUB</text>
+</svg>
+
+</div>
+
 Welcome to the GodView wiki — the place where documentation lives when it outgrows the README.
 
 ---
+
 
 ## What Is GodView?
 
