@@ -1,5 +1,45 @@
 # 🔧 Troubleshooting
 
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" width="700" height="100">
+  <defs>
+    <radialGradient id="troubleBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="troubleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <filter id="troubleGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="700" height="100" rx="10" fill="url(#troubleBg)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="33" x2="700" y2="33"/>
+    <line x1="0" y1="66" x2="700" y2="66"/>
+    <line x1="175" y1="0" x2="175" y2="100"/>
+    <line x1="350" y1="0" x2="350" y2="100"/>
+    <line x1="525" y1="0" x2="525" y2="100"/>
+  </g>
+  <!-- Wrench icon shape -->
+  <g transform="translate(290, 50)" filter="url(#troubleGlow)">
+    <line x1="-12" y1="12" x2="8" y2="-8" stroke="#f43f5e" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="10" cy="-10" r="6" fill="none" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="10" cy="-10" r="2.5" fill="#f43f5e" opacity="0.8"/>
+    <circle cx="-13" cy="13" r="3" fill="none" stroke="#fb7185" stroke-width="1.5"/>
+  </g>
+  <!-- Title -->
+  <text x="324" y="44" font-family="'Outfit', system-ui, sans-serif" font-size="24" font-weight="700" fill="url(#troubleGrad)" letter-spacing="-0.5" filter="url(#troubleGlow)">Troubleshooting</text>
+  <text x="324" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#71717a" letter-spacing="3">WHEN THINGS GO SIDEWAYS</text>
+</svg>
+
+</div>
+
 Something's broken? Let's fix it. This page covers the most common issues and their fixes. If you've ended up here, take a breath — it's probably something small.
 
 ---

@@ -1,5 +1,46 @@
 # 🎮 Usage
 
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" width="700" height="100">
+  <defs>
+    <radialGradient id="usageBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="usageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <filter id="usageGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="700" height="100" rx="10" fill="url(#usageBg)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="33" x2="700" y2="33"/>
+    <line x1="0" y1="66" x2="700" y2="66"/>
+    <line x1="175" y1="0" x2="175" y2="100"/>
+    <line x1="350" y1="0" x2="350" y2="100"/>
+    <line x1="525" y1="0" x2="525" y2="100"/>
+  </g>
+  <!-- Gamepad icon shape -->
+  <g transform="translate(290, 50)" filter="url(#usageGlow)">
+    <rect x="-18" y="-11" width="36" height="22" rx="8" fill="none" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="-10" y1="0" x2="-6" y2="0" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="-8" y1="-2" x2="-8" y2="2" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="8" cy="-2" r="2" fill="#f43f5e" opacity="0.9"/>
+    <circle cx="12" cy="2" r="2" fill="#fb7185" opacity="0.7"/>
+  </g>
+  <!-- Title -->
+  <text x="324" y="44" font-family="'Outfit', system-ui, sans-serif" font-size="28" font-weight="700" fill="url(#usageGrad)" letter-spacing="-0.5" filter="url(#usageGlow)">Usage</text>
+  <text x="324" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#71717a" letter-spacing="3">CONFIG REFERENCE &amp; EXAMPLES</text>
+</svg>
+
+</div>
+
 This page covers the full config API, all the knobs you can turn, and some examples of GodView being used in the wild (well, in code at least).
 
 ---
