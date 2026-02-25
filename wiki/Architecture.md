@@ -228,9 +228,9 @@ The `fn` receives the full (unfiltered) dataset and returns any value. The rende
 
 ## CSS Architecture
 
-All styles live in `godview.css` and are scoped to `#godview-container` (the default container ID, or whatever you pass as `containerId`). Wait — actually they're scoped to class selectors prefixed with `gv-`, not the container ID. The container-level CSS variables are set on `#godview-container`.
+All styles live in `godview.css`. Scoped CSS classes are prefixed with `gv-`, while container-level CSS variables are set on the element with `containerId` (default: `#godview-container`).
 
-**If you use a different `containerId`**, the CSS variables won't inherit correctly from the default `#godview-container` selector. You'd need to add a matching CSS rule for your container ID. This is a known limitation.
+**If you use a different `containerId`**, ensure the same CSS variables are declared for your custom container selector.
 
 CSS custom properties used throughout:
 
