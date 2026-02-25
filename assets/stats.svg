@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" width="820" height="280" role="img" aria-label="GodView Project Stats Dashboard">
+  <defs>
+    <radialGradient id="stBg" cx="50%" cy="10%" r="90%">
+      <stop offset="0%" stop-color="#1a1033"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <filter id="stGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="280" rx="16" fill="url(#stBg)"/>
+
+  <!-- Title bar -->
+  <rect x="20" y="18" width="780" height="38" rx="8" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="40" cy="37" r="5" fill="#f43f5e" opacity="0.8"/>
+  <circle cx="56" cy="37" r="5" fill="#fb923c" opacity="0.8"/>
+  <circle cx="72" cy="37" r="5" fill="#10b981" opacity="0.6"/>
+  <text x="410" y="41" font-family="system-ui, sans-serif" font-size="11" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="2.5">GODVIEW — PROJECT STATS</text>
+
+  <!-- ── Metric cards row 1 ── -->
+
+  <!-- Card: JS Lines -->
+  <rect x="20" y="72" width="148" height="82" rx="10" fill="rgba(244,63,94,0.08)" stroke="rgba(244,63,94,0.25)" stroke-width="1.5"/>
+  <text x="44" y="96" font-family="system-ui" font-size="10" fill="#f43f5e" letter-spacing="1" font-weight="600">JS LINES</text>
+  <text x="44" y="128" font-family="'Outfit', system-ui" font-size="32" fill="#fb7185" font-weight="800" filter="url(#stGlow)">422</text>
+  <text x="44" y="147" font-family="monospace" font-size="9" fill="#52525b">godview.js · 1 ES6 class</text>
+
+  <!-- Card: CSS Lines -->
+  <rect x="179" y="72" width="148" height="82" rx="10" fill="rgba(139,92,246,0.08)" stroke="rgba(139,92,246,0.25)" stroke-width="1.5"/>
+  <text x="203" y="96" font-family="system-ui" font-size="10" fill="#8b5cf6" letter-spacing="1" font-weight="600">CSS LINES</text>
+  <text x="203" y="128" font-family="'Outfit', system-ui" font-size="32" fill="#a78bfa" font-weight="800" filter="url(#stGlow)">561</text>
+  <text x="203" y="147" font-family="monospace" font-size="9" fill="#52525b">godview.css · scoped gv-*</text>
+
+  <!-- Card: Source Files -->
+  <rect x="338" y="72" width="148" height="82" rx="10" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.25)" stroke-width="1.5"/>
+  <text x="362" y="96" font-family="system-ui" font-size="10" fill="#fb923c" letter-spacing="1" font-weight="600">SOURCE FILES</text>
+  <text x="362" y="128" font-family="'Outfit', system-ui" font-size="32" fill="#fb923c" font-weight="800" filter="url(#stGlow)">2</text>
+  <text x="362" y="147" font-family="monospace" font-size="9" fill="#52525b">godview.js + godview.css</text>
+
+  <!-- Card: Runtime Deps -->
+  <rect x="497" y="72" width="148" height="82" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.25)" stroke-width="1.5"/>
+  <text x="521" y="96" font-family="system-ui" font-size="10" fill="#10b981" letter-spacing="1" font-weight="600">RUNTIME DEPS</text>
+  <text x="521" y="128" font-family="'Outfit', system-ui" font-size="32" fill="#34d399" font-weight="800" filter="url(#stGlow)">0</text>
+  <text x="521" y="147" font-family="monospace" font-size="9" fill="#52525b">zero · Leaflet is peer dep</text>
+
+  <!-- Card: Peer Dep version -->
+  <rect x="656" y="72" width="148" height="82" rx="10" fill="rgba(244,63,94,0.06)" stroke="rgba(244,63,94,0.2)" stroke-width="1.5"/>
+  <text x="680" y="96" font-family="system-ui" font-size="10" fill="#f43f5e" letter-spacing="1" font-weight="600">PEER DEP</text>
+  <text x="680" y="125" font-family="'Outfit', system-ui" font-size="22" fill="#fb7185" font-weight="800">1.9.4</text>
+  <text x="680" y="147" font-family="monospace" font-size="9" fill="#52525b">Leaflet.js · map engine</text>
+
+  <!-- ── Metric cards row 2 ── -->
+
+  <!-- Card: Config Options -->
+  <rect x="20" y="166" width="148" height="82" rx="10" fill="rgba(139,92,246,0.08)" stroke="rgba(139,92,246,0.22)" stroke-width="1.5"/>
+  <text x="44" y="190" font-family="system-ui" font-size="10" fill="#8b5cf6" letter-spacing="1" font-weight="600">CONFIG OPTIONS</text>
+  <text x="44" y="222" font-family="'Outfit', system-ui" font-size="32" fill="#a78bfa" font-weight="800" filter="url(#stGlow)">7</text>
+  <text x="44" y="241" font-family="monospace" font-size="9" fill="#52525b">top-level constructor keys</text>
+
+  <!-- Card: Default Stat Cards -->
+  <rect x="179" y="166" width="148" height="82" rx="10" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.22)" stroke-width="1.5"/>
+  <text x="203" y="190" font-family="system-ui" font-size="10" fill="#fb923c" letter-spacing="1" font-weight="600">DEFAULT STATS</text>
+  <text x="203" y="222" font-family="'Outfit', system-ui" font-size="32" fill="#fb923c" font-weight="800" filter="url(#stGlow)">4</text>
+  <text x="203" y="241" font-family="monospace" font-size="9" fill="#52525b">events · users · locs · clicks</text>
+
+  <!-- Card: Mock Locations -->
+  <rect x="338" y="166" width="148" height="82" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.22)" stroke-width="1.5"/>
+  <text x="362" y="190" font-family="system-ui" font-size="10" fill="#10b981" letter-spacing="1" font-weight="600">MOCK LOCATIONS</text>
+  <text x="362" y="222" font-family="'Outfit', system-ui" font-size="32" fill="#34d399" font-weight="800" filter="url(#stGlow)">5</text>
+  <text x="362" y="241" font-family="monospace" font-size="9" fill="#52525b">Kochi · SF · London · Berlin · Tokyo</text>
+
+  <!-- Card: Build Step -->
+  <rect x="497" y="166" width="148" height="82" rx="10" fill="rgba(244,63,94,0.07)" stroke="rgba(244,63,94,0.18)" stroke-width="1.5"/>
+  <text x="521" y="190" font-family="system-ui" font-size="10" fill="#f43f5e" letter-spacing="1" font-weight="600">BUILD STEP</text>
+  <text x="521" y="220" font-family="'Outfit', system-ui" font-size="28" fill="#fb7185" font-weight="800">NONE</text>
+  <text x="521" y="241" font-family="monospace" font-size="9" fill="#52525b">drop-in · &lt;script type="module"&gt;</text>
+
+  <!-- Card: Version -->
+  <rect x="656" y="166" width="148" height="82" rx="10" fill="rgba(139,92,246,0.07)" stroke="rgba(139,92,246,0.18)" stroke-width="1.5"/>
+  <text x="680" y="190" font-family="system-ui" font-size="10" fill="#8b5cf6" letter-spacing="1" font-weight="600">VERSION</text>
+  <text x="680" y="222" font-family="'Outfit', system-ui" font-size="28" fill="#a78bfa" font-weight="800">1.1.0</text>
+  <text x="680" y="241" font-family="monospace" font-size="9" fill="#52525b">unreleased · in development</text>
+
+  <!-- Bottom line -->
+  <text x="410" y="268" font-family="monospace" font-size="9.5" fill="#3f3f46" text-anchor="middle">MIT License · ES6 · no framework · no bundler required</text>
+</svg>
