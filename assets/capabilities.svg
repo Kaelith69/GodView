@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" role="img" aria-label="GodView Capabilities Overview">
+  <defs>
+    <radialGradient id="capBg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#1a1033"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <filter id="capGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="500" rx="16" fill="url(#capBg)"/>
+
+  <!-- Title -->
+  <text x="410" y="30" font-family="system-ui, sans-serif" font-size="11" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="2.5">GODVIEW — CAPABILITIES</text>
+
+  <!-- Column headers -->
+  <text x="250" y="56" font-family="system-ui" font-size="10" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="1.5">FEATURE</text>
+  <text x="540" y="56" font-family="system-ui" font-size="10" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="1.5">DESCRIPTION</text>
+  <text x="742" y="56" font-family="system-ui" font-size="10" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="1.5">STATUS</text>
+
+  <line x1="20" y1="62" x2="800" y2="62" stroke="rgba(82,82,91,0.4)" stroke-width="1"/>
+
+  <!-- ── Row 1: Auth ── -->
+  <!-- Status dot: implemented -->
+  <circle cx="64" cy="95" r="18" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="64" y="100" font-family="system-ui" font-size="16" text-anchor="middle">🔒</text>
+  <text x="100" y="90" font-family="system-ui" font-size="13" fill="#fafafa" font-weight="700">Session Auth</text>
+  <text x="100" y="107" font-family="monospace" font-size="9.5" fill="#71717a">password gate + sessionStorage</text>
+  <!-- description -->
+  <text x="340" y="90" font-family="system-ui" font-size="11" fill="#a1a1aa">Password-gated login with sessionStorage token.</text>
+  <text x="340" y="106" font-family="system-ui" font-size="11" fill="#a1a1aa">Namespaced by containerId for multi-instance support.</text>
+  <!-- status pill: done -->
+  <rect x="690" y="79" width="100" height="26" rx="13" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="709" cy="92" r="4" fill="#10b981"/>
+  <text x="748" y="96" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">SHIPPED</text>
+
+  <line x1="20" y1="120" x2="800" y2="120" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 2: Map ── -->
+  <circle cx="64" cy="153" r="18" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="1.5"/>
+  <text x="64" y="158" font-family="system-ui" font-size="16" text-anchor="middle">🗺️</text>
+  <text x="100" y="148" font-family="system-ui" font-size="13" fill="#fafafa" font-weight="700">Geospatial Map</text>
+  <text x="100" y="165" font-family="monospace" font-size="9.5" fill="#71717a">Leaflet.js · CartoDB dark tiles</text>
+  <text x="340" y="148" font-family="system-ui" font-size="11" fill="#a1a1aa">Interactive world map on CartoDB dark tiles with</text>
+  <text x="340" y="164" font-family="system-ui" font-size="11" fill="#a1a1aa">glowing markers and popup tooltips per data item.</text>
+  <rect x="690" y="137" width="100" height="26" rx="13" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="709" cy="150" r="4" fill="#10b981"/>
+  <text x="748" y="154" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">SHIPPED</text>
+
+  <line x1="20" y1="178" x2="800" y2="178" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 3: Stat Cards ── -->
+  <circle cx="64" cy="211" r="18" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="64" y="216" font-family="system-ui" font-size="16" text-anchor="middle">📊</text>
+  <text x="100" y="206" font-family="system-ui" font-size="13" fill="#fafafa" font-weight="700">Configurable Stat Cards</text>
+  <text x="100" y="223" font-family="monospace" font-size="9.5" fill="#71717a">stats[ ] · fn(data) aggregator</text>
+  <text x="340" y="206" font-family="system-ui" font-size="11" fill="#a1a1aa">Define stats as objects with fn(data) aggregators.</text>
+  <text x="340" y="222" font-family="system-ui" font-size="11" fill="#a1a1aa">Returns any value — count, sum, computed string.</text>
+  <rect x="690" y="195" width="100" height="26" rx="13" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="709" cy="208" r="4" fill="#10b981"/>
+  <text x="748" y="212" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">SHIPPED</text>
+
+  <line x1="20" y1="236" x2="800" y2="236" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 4: Search ── -->
+  <circle cx="64" cy="269" r="18" fill="rgba(251,146,60,0.12)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="64" y="274" font-family="system-ui" font-size="16" text-anchor="middle">🔎</text>
+  <text x="100" y="264" font-family="system-ui" font-size="13" fill="#fafafa" font-weight="700">Live Search Filter</text>
+  <text x="100" y="281" font-family="monospace" font-size="9.5" fill="#71717a">debounced 300ms · all schema fields</text>
+  <text x="340" y="264" font-family="system-ui" font-size="11" fill="#a1a1aa">Debounced search across all card fields (title,</text>
+  <text x="340" y="280" font-family="system-ui" font-size="11" fill="#a1a1aa">subtitle, detail, meta, location) with 300ms delay.</text>
+  <rect x="690" y="253" width="100" height="26" rx="13" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="709" cy="266" r="4" fill="#10b981"/>
+  <text x="748" y="270" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">SHIPPED</text>
+
+  <line x1="20" y1="294" x2="800" y2="294" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 5: CSV Export ── -->
+  <circle cx="64" cy="327" r="18" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="64" y="332" font-family="system-ui" font-size="16" text-anchor="middle">📥</text>
+  <text x="100" y="322" font-family="system-ui" font-size="13" fill="#fafafa" font-weight="700">CSV Export</text>
+  <text x="100" y="339" font-family="monospace" font-size="9.5" fill="#71717a">Blob API · schema-dynamic headers</text>
+  <text x="340" y="322" font-family="system-ui" font-size="11" fill="#a1a1aa">Exports current dataset to CSV with headers derived</text>
+  <text x="340" y="338" font-family="system-ui" font-size="11" fill="#a1a1aa">dynamically from your schema config. No server needed.</text>
+  <rect x="690" y="311" width="100" height="26" rx="13" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="709" cy="324" r="4" fill="#10b981"/>
+  <text x="748" y="328" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle" font-weight="600">SHIPPED</text>
+
+  <line x1="20" y1="352" x2="800" y2="352" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 6: WebSocket (planned) ── -->
+  <circle cx="64" cy="385" r="18" fill="rgba(82,82,91,0.1)" stroke="#52525b" stroke-width="1.5"/>
+  <text x="64" y="390" font-family="system-ui" font-size="16" text-anchor="middle">⚡</text>
+  <text x="100" y="380" font-family="system-ui" font-size="13" fill="#71717a" font-weight="700">WebSocket Live Feed</text>
+  <text x="100" y="397" font-family="monospace" font-size="9.5" fill="#52525b">websocketUrl config option</text>
+  <text x="340" y="380" font-family="system-ui" font-size="11" fill="#52525b">Connect a live WebSocket stream to the dashboard.</text>
+  <text x="340" y="396" font-family="system-ui" font-size="11" fill="#52525b">Data layer is ready — source plugin is the missing piece.</text>
+  <rect x="690" y="369" width="100" height="26" rx="13" fill="rgba(82,82,91,0.12)" stroke="#52525b" stroke-width="1"/>
+  <circle cx="709" cy="382" r="4" fill="#52525b"/>
+  <text x="748" y="386" font-family="system-ui" font-size="10" fill="#71717a" text-anchor="middle" font-weight="600">PLANNED</text>
+
+  <line x1="20" y1="410" x2="800" y2="410" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- ── Row 7: Pagination (planned) ── -->
+  <circle cx="64" cy="443" r="18" fill="rgba(82,82,91,0.1)" stroke="#52525b" stroke-width="1.5"/>
+  <text x="64" y="448" font-family="system-ui" font-size="16" text-anchor="middle">📄</text>
+  <text x="100" y="438" font-family="system-ui" font-size="13" fill="#71717a" font-weight="700">Pagination / Virtual Scroll</text>
+  <text x="100" y="455" font-family="monospace" font-size="9.5" fill="#52525b">render() currently rebuilds full list</text>
+  <text x="340" y="438" font-family="system-ui" font-size="11" fill="#52525b">Paginate or virtual-scroll large datasets (&gt;500 items)</text>
+  <text x="340" y="454" font-family="system-ui" font-size="11" fill="#52525b">to stop render() from becoming sluggish.</text>
+  <rect x="690" y="427" width="100" height="26" rx="13" fill="rgba(82,82,91,0.12)" stroke="#52525b" stroke-width="1"/>
+  <circle cx="709" cy="440" r="4" fill="#52525b"/>
+  <text x="748" y="444" font-family="system-ui" font-size="10" fill="#71717a" text-anchor="middle" font-weight="600">PLANNED</text>
+
+  <line x1="20" y1="468" x2="800" y2="468" stroke="rgba(82,82,91,0.2)" stroke-width="1"/>
+
+  <!-- Legend bottom -->
+  <circle cx="40" cy="487" r="5" fill="#10b981"/>
+  <text x="52" y="491" font-family="system-ui" font-size="10" fill="#71717a">Shipped in v1.x</text>
+  <circle cx="160" cy="487" r="5" fill="#52525b"/>
+  <text x="172" y="491" font-family="system-ui" font-size="10" fill="#71717a">Planned for v2.x</text>
+</svg>
