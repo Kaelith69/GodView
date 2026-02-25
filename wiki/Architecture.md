@@ -4,6 +4,110 @@ GodView is a single ES6 class. No framework, no reactive system, no virtual DOM.
 
 ---
 
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 480" width="740" height="480">
+  <defs>
+    <radialGradient id="archBg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#52525b"/>
+    </marker>
+    <marker id="arrAmber" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrRose" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#f43f5e"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#10B981"/>
+    </marker>
+  </defs>
+  <rect width="740" height="480" rx="14" fill="url(#archBg)"/>
+  <text x="370" y="28" font-family="system-ui" font-size="12" fill="#52525b" text-anchor="middle" font-weight="600" letter-spacing="2">GODVIEW — MODULE INTERNALS</text>
+
+  <!-- Row 1: Host Page -->
+  <rect x="270" y="42" width="200" height="44" rx="8" fill="rgba(37,99,235,0.15)" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="370" y="60" font-family="system-ui" font-size="12" fill="#60a5fa" text-anchor="middle" font-weight="600">Host Page</text>
+  <text x="370" y="77" font-family="monospace" font-size="10" fill="#52525b" text-anchor="middle">index.html + &lt;div id="..."&gt;</text>
+
+  <!-- Arrow: Host → GodView -->
+  <line x1="370" y1="86" x2="370" y2="112" stroke="#52525b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 2: GodView Class -->
+  <rect x="235" y="114" width="270" height="50" rx="8" fill="rgba(244,63,94,0.15)" stroke="#f43f5e" stroke-width="2"/>
+  <text x="370" y="135" font-family="system-ui" font-size="13" fill="#fb7185" text-anchor="middle" font-weight="700">GodView Class</text>
+  <text x="370" y="153" font-family="monospace" font-size="10" fill="#52525b" text-anchor="middle">new GodView(config).init()</text>
+
+  <!-- Arrows: GodView → 3 layers -->
+  <line x1="310" y1="164" x2="160" y2="218" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrAmber)"/>
+  <line x1="370" y1="164" x2="370" y2="218" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrRose)"/>
+  <line x1="430" y1="164" x2="580" y2="218" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrGreen)"/>
+
+  <!-- Row 3: Three Layers -->
+  <!-- Auth Layer -->
+  <rect x="50" y="220" width="170" height="52" rx="8" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="135" y="242" font-family="system-ui" font-size="12" fill="#fbbf24" text-anchor="middle" font-weight="600">Auth Layer</text>
+  <text x="135" y="260" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">sessionStorage token</text>
+
+  <!-- Render Engine -->
+  <rect x="285" y="220" width="170" height="52" rx="8" fill="rgba(244,63,94,0.12)" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="370" y="242" font-family="system-ui" font-size="12" fill="#fb7185" text-anchor="middle" font-weight="600">Render Engine</text>
+  <text x="370" y="260" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">innerHTML + DOM</text>
+
+  <!-- Data Layer -->
+  <rect x="520" y="220" width="170" height="52" rx="8" fill="rgba(16,185,129,0.12)" stroke="#10B981" stroke-width="1.5"/>
+  <text x="605" y="242" font-family="system-ui" font-size="12" fill="#34d399" text-anchor="middle" font-weight="600">Data Layer</text>
+  <text x="605" y="260" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">fetchDataFn / mock</text>
+
+  <!-- Arrows: Render → sub-parts -->
+  <line x1="330" y1="272" x2="190" y2="334" stroke="#52525b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <line x1="355" y1="272" x2="300" y2="334" stroke="#52525b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <line x1="385" y1="272" x2="415" y2="334" stroke="#52525b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <line x1="410" y1="272" x2="520" y2="334" stroke="#52525b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+  <!-- Row 4: Render sub-parts -->
+  <rect x="100" y="336" width="108" height="44" rx="6" fill="rgba(37,99,235,0.1)" stroke="#2563EB" stroke-width="1"/>
+  <text x="154" y="354" font-family="system-ui" font-size="10" fill="#60a5fa" text-anchor="middle">Map</text>
+  <text x="154" y="371" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">Leaflet.js</text>
+
+  <rect x="222" y="336" width="108" height="44" rx="6" fill="rgba(244,63,94,0.1)" stroke="#f43f5e" stroke-width="1"/>
+  <text x="276" y="354" font-family="system-ui" font-size="10" fill="#fb7185" text-anchor="middle">Stat Cards</text>
+  <text x="276" y="371" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">fn(data) → value</text>
+
+  <rect x="344" y="336" width="108" height="44" rx="6" fill="rgba(245,158,11,0.1)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="398" y="354" font-family="system-ui" font-size="10" fill="#fbbf24" text-anchor="middle">Data Cards</text>
+  <text x="398" y="371" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">schema + filter</text>
+
+  <rect x="466" y="336" width="108" height="44" rx="6" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="1"/>
+  <text x="520" y="354" font-family="system-ui" font-size="10" fill="#34d399" text-anchor="middle">CSV Export</text>
+  <text x="520" y="371" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">Blob + anchor</text>
+
+  <!-- godview.css note -->
+  <rect x="594" y="336" width="120" height="44" rx="6" fill="rgba(161,161,170,0.07)" stroke="rgba(161,161,170,0.2)" stroke-width="1"/>
+  <text x="654" y="354" font-family="system-ui" font-size="10" fill="#a1a1aa" text-anchor="middle">godview.css</text>
+  <text x="654" y="371" font-family="monospace" font-size="9" fill="#52525b" text-anchor="middle">scoped styles</text>
+
+  <!-- CSS: from GodView class to godview.css -->
+  <line x1="505" y1="164" x2="654" y2="336" stroke="rgba(161,161,170,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Legend -->
+  <rect x="20" y="430" width="12" height="12" rx="2" fill="#F59E0B"/>
+  <text x="38" y="441" font-family="system-ui" font-size="10" fill="#71717a">Auth</text>
+  <rect x="82" y="430" width="12" height="12" rx="2" fill="#f43f5e"/>
+  <text x="100" y="441" font-family="system-ui" font-size="10" fill="#71717a">Render</text>
+  <rect x="152" y="430" width="12" height="12" rx="2" fill="#10B981"/>
+  <text x="170" y="441" font-family="system-ui" font-size="10" fill="#71717a">Data</text>
+  <rect x="210" y="430" width="12" height="12" rx="2" fill="#2563EB"/>
+  <text x="228" y="441" font-family="system-ui" font-size="10" fill="#71717a">External / Host</text>
+</svg>
+
+</div>
+
+---
+
 ## Module Structure
 
 ```
